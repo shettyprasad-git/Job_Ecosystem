@@ -101,6 +101,33 @@ Job Ecosystem/                    ← repo root
     │   ├── tailwind.config.ts
     │   └── tsconfig.json
     │
+    ├── resume/                   ← AI Resume Builder
+    │   ├── app/
+    │   │   ├── builder/
+    │   │   ├── preview/
+    │   │   ├── proof/
+    │   │   ├── rb/               # step flow + proof
+    │   │   │   ├── [stepId]/
+    │   │   │   └── proof/
+    │   │   ├── globals.css
+    │   │   ├── layout.tsx
+    │   │   └── page.tsx
+    │   ├── ai/
+    │   │   ├── dev.ts
+    │   │   └── genkit.ts
+    │   ├── components/
+    │   │   ├── builder/
+    │   │   ├── build-track/
+    │   │   └── ui/               # shadcn-style components
+    │   ├── hooks/
+    │   ├── lib/
+    │   ├── next.config.mjs
+    │   ├── next-env.d.ts
+    │   ├── package.json
+    │   ├── postcss.config.mjs
+    │   ├── tailwind.config.ts
+    │   └── tsconfig.json
+    │
     └── jobs/                     ← Job Notification Tracker
         ├── app/
         │   ├── dashboard/

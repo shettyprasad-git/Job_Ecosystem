@@ -9,6 +9,7 @@ apps/
   hub/         # Landing page & entry point (links to other apps)
   placement/   # Placement Readiness Platform – JD analysis, readiness, practice
   jobs/        # Job Notification Tracker – listings, saved jobs, status
+  resume/      # AI Resume Builder – builder, preview, proof
 ```
 
 ## Run locally
@@ -24,6 +25,9 @@ cd apps/placement && npm install && npm run dev
 
 # Jobs (port 3002)
 cd apps/jobs && npm install && npm run dev
+
+# Resume (port 3003)
+cd apps/resume && npm install && npm run dev
 ```
 
 Set hub env vars so the hub links to the right URLs:
