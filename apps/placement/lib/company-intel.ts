@@ -56,8 +56,9 @@ export function generateCompanyIntel(companyName: string): CompanyIntel | undefi
 
 export function generateDynamicRoundMapping(skills: ExtractedSkills, companyIntel?: CompanyIntel): DynamicRound[] {
     const size = companyIntel?.size || 'Startup';
-    const hasDsa = skills['Core CS']?.some(skill => skill.toLowerCase() === 'dsa');
-    const hasWebSkills = skills['Web'] && skills['Web'].length > 0;
+    const hasDsa = skills.coreCS?.some(skill => skill.toLowerCase() === 'dsa');
+    const hasWebSkills = skills.web && skills.web.length > 0;
+
 
     const mapping: DynamicRound[] = [];
 
