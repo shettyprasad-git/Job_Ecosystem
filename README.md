@@ -62,6 +62,27 @@ After deploy, set the hub’s env vars to the real Placement and Jobs URLs, then
 - **Hub:** Next.js 14, Tailwind, Lucide React.
 - **Placement & Jobs:** Next.js 14, Tailwind, Radix UI, Lucide React, shadcn-style components.
 
+## Push to GitHub
+
+1. Create a new repository on GitHub (e.g. `job-ecosystem`). Do **not** initialize with a README (this repo already has one).
+
+2. From this folder, run:
+
+   ```bash
+   git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
+   git branch -M main
+   git push -u origin main
+   ```
+
+   Replace `YOUR_USERNAME` and `YOUR_REPO` with your GitHub username and repo name.
+
+3. (Optional) Set your git identity if you haven’t:
+
+   ```bash
+   git config --global user.email "your@email.com"
+   git config --global user.name "Your Name"
+   ```
+
 ## License
 
 Private – KodNest.
