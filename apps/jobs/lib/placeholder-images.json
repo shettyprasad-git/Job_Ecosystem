@@ -1,0 +1,10 @@
+{
+  "placeholderImages": [
+    {
+      "id": "screenshot-placeholder",
+      "description": "A placeholder for a user-submitted screenshot of a code component.",
+      "imageUrl": "https://images.unsplash.com/photo-1551033406-611cf9a28f67?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjb2RlJTIwc2NyZWVuc2hvdHxlbnwwfHx8fDE3NzEzMjM0OTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "code screenshot"
+    }
+  ]
+}
