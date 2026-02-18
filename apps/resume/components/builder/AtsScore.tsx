@@ -60,10 +60,3 @@ export default function AtsScore({ score, suggestions }: AtsScoreProps) {
         </Card>
     )
 }
-
-// Add this to progress component to allow custom indicator color
-declare module "@/components/ui/progress" {
-    interface ProgressProps extends React.ComponentPropsWithoutRef<typeof ProgressPrimitive.Root> {
-        indicatorClassName?: string;
-    }
-}

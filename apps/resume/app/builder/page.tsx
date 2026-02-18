@@ -166,9 +166,9 @@ export default function BuilderPage() {
                     title="Education"
                     items={resume.education}
                     onAdd={() => openEditDialog('education', null)}
-                    onEdit={(item) => openEditDialog('education', item)}
-                    onDelete={(id) => handleDeleteEntry('education', id)}
-                    renderItem={(item) => (
+                    onEdit={(item: EducationEntry) => openEditDialog('education', item)}
+                    onDelete={(id: string) => handleDeleteEntry('education', id)}
+                    renderItem={(item: EducationEntry) => (
                         <div>
                             <p className="font-semibold">{item.school}</p>
                             <p className="text-sm text-muted-foreground">{item.degree}</p>
@@ -180,9 +180,9 @@ export default function BuilderPage() {
                     title="Experience"
                     items={resume.experience}
                     onAdd={() => openEditDialog('experience', null)}
-                    onEdit={(item) => openEditDialog('experience', item)}
-                    onDelete={(id) => handleDeleteEntry('experience', id)}
-                    renderItem={(item) => (
+                    onEdit={(item: ExperienceEntry) => openEditDialog('experience', item)}
+                    onDelete={(id: string) => handleDeleteEntry('experience', id)}
+                    renderItem={(item: ExperienceEntry) => (
                         <div>
                             <p className="font-semibold">{item.company}</p>
                             <p className="text-sm text-muted-foreground">{item.role}</p>
@@ -312,7 +312,11 @@ export default function BuilderPage() {
                 <DialogContent>
                     <DialogHeader>
                         <DialogTitle>
-                            {editingEntry ? 'Edit' : 'Add'} {editingSection?.charAt(0).toUpperCase() + editingSection?.slice(1)}
+                            {editingEntry ? "Edit" : "Add"}{" "}
+                            {editingSection
+                              ? editingSection.charAt(0).toUpperCase() +
+                                editingSection.slice(1)
+                              : ""}
                         </DialogTitle>
                     </DialogHeader>
                     {editingSection === 'education' && <EducationForm onSave={(entry) => handleSaveEntry('education', entry)} onCancel={closeEditDialog} entry={editingEntry as EducationEntry | null} />}
