@@ -9,7 +9,8 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
-import { SkillBreakdownChart } from "@/components/dashboard/skill-breakdown-chart";
+import dynamic from 'next/dynamic';
+const SkillBreakdownChart = dynamic(() => import("@/components/dashboard/skill-breakdown-chart").then(mod => mod.SkillBreakdownChart), { ssr: false });
 import { Clock } from "lucide-react";
 import { useState, useEffect } from 'react';
 
@@ -17,7 +18,7 @@ export default function DashboardPage() {
   const [readinessScore, setReadinessScore] = useState(0);
   const [circumference, setCircumference] = useState(0);
   const [offset, setOffset] = useState(0);
-  
+
   useEffect(() => {
     // This will only run on the client
     const score = 72;
@@ -25,7 +26,7 @@ export default function DashboardPage() {
     const strokeWidth = 16;
     const calculatedCircumference = 2 * Math.PI * radius;
     const calculatedOffset = calculatedCircumference - (score / 100) * calculatedCircumference;
-    
+
     setReadinessScore(score);
     setCircumference(calculatedCircumference);
     setOffset(calculatedOffset);
@@ -108,7 +109,7 @@ export default function DashboardPage() {
           </CardHeader>
           <CardContent>
             <p className="text-muted-foreground">Problems Solved: <span className="font-bold text-foreground">12/20</span> this week</p>
-            <Progress value={(12/20)*100} className="my-3" />
+            <Progress value={(12 / 20) * 100} className="my-3" />
             <div className="mt-4 flex justify-around">
               {weekActivity.map((day, index) => (
                 <div key={index} className="flex flex-col items-center gap-2">
@@ -131,7 +132,7 @@ export default function DashboardPage() {
             <SkillBreakdownChart />
           </CardContent>
         </Card>
-        
+
         {/* Upcoming Assessments */}
         <Card>
           <CardHeader>

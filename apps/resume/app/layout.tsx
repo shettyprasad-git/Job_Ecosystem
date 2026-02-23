@@ -1,4 +1,4 @@
-import type {Metadata} from 'next';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 function AppHeader() {
   return (
-    <header className="flex h-16 items-center justify-between border-b bg-card px-6 sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 no-print">
+    <header className="flex h-16 items-center justify-between border-b border-border/50 sticky top-0 z-50 w-full glass no-print px-6">
       <Link href="/" className="font-headline text-lg font-medium text-foreground">
         AI Resume Builder
       </Link>

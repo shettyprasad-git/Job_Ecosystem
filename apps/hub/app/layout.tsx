@@ -19,8 +19,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={outfit.variable}>
-      <body className="min-h-screen font-sans antialiased bg-[var(--background)] text-[var(--foreground)]">
+    <html lang="en" className={`dark ${outfit.variable}`}>
+      <body className="font-sans antialiased">
         {children}
       </body>
     </html>
