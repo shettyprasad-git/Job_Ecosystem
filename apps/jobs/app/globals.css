@@ -115,7 +115,7 @@
 
   /* Global glass utilities */
   .glass {
-    @apply bg-background/50 backdrop-blur-xl border border-white/10 shadow-[0_4px_30px_rgba(0, 0, 0, 0.1)];
+    @apply bg-background/50 backdrop-blur-xl border border-white/10 shadow-lg shadow-black/10;
   }
 
   .glass-panel {

@@ -100,9 +100,10 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
-    background-image: 
+    background-image:
       radial-gradient(circle at 10% 20%, rgba(14, 165, 233, 0.15) 0%, transparent 40%),
       radial-gradient(circle at 90% 80%, rgba(29, 78, 216, 0.15) 0%, transparent 40%);
     background-attachment: fixed;
@@ -111,15 +112,16 @@
 }
 
 @layer components {
+
   /* Global glass utilities */
   .glass {
-    @apply bg-background/50 backdrop-blur-xl border border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.1)];
+    @apply bg-background/50 backdrop-blur-xl border border-white/10 shadow-lg shadow-black/10;
   }
-  
+
   .glass-panel {
     @apply bg-background/70 backdrop-blur-2xl border border-white/5;
   }
-  
+
   .glass-card {
     @apply bg-card/60 backdrop-blur-md border border-border/50 hover:border-primary/50 transition-colors duration-300;
   }
@@ -132,18 +134,22 @@
     background-image: none !important;
     color: #000 !important;
   }
+
   .no-print {
     display: none !important;
   }
+
   main {
     padding: 0 !important;
     margin: 0 !important;
   }
+
   .printable-area {
     padding: 0 !important;
     margin: 0 !important;
     background: #fff !important;
   }
+
   .resume-print-container {
     box-shadow: none !important;
     border: none !important;
@@ -152,13 +158,16 @@
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
+
   :root {
     --resume-accent: #000 !important;
   }
+
   @page {
     size: A4;
     margin: 1.5cm;
   }
+
   .break-inside-avoid {
     break-inside: avoid;
   }
